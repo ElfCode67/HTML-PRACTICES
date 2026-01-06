@@ -1,108 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hence - Aspiring SWE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <center>
-    
-    <h1>Hey there I'm Hence</h1>
-    <hr>
-    
-    <p>I'm an aspiring SWE and I'm currently pursuing my bachelors degree in computer science at Batangas State University Alangilan Campus.</p>
-    <br>
-    
-    <!-- Table to align profile picture and GitHub side by side -->
-    <table align="center">
-        <tr>
-            <td>
-                <img src="assets/ProfileGen.jpeg" alt="Hence's Profile Picture" height="200">
-            </td>
-            <td width="50"></td> <!-- Space between -->
-            <td>
-            </td>
-        </tr>
-    </table>
-    <br><br>
-    
-    <h2>Here is my tech stack:</h2>
-    <p>HTML CSS JS</p>
-    <p>PYTHON</p>
-    <p>DSA</p>
-    <p>JAVA</p>
-    <p>SQL</p>
-    <p>PHP</p>
-    <p>KOTLIN</p>
-    <p>FLUTTER</p>
-    <br>
-    
-    <h2>Personal Information:</h2>
-    <p>Email: balmesgenrique27@gmail.com</p>
-    <p>Number: 09081231414</p>
-    <p>Age: 21 Male</p>
-    <br>
-    
-    <h2>My Hobbies Gallery</h2>
-    
-    <h3>Music</h3>
-    <h4>Favorite Artist: Ado</h4>
-    
-    <!-- Table to align Ado image and Spotify playlist side by side -->
-    <table align="center">
-        <tr>
-            <td>
-                <a href="https://open.spotify.com/artist/6mEQK9m2krja6X1cfsAjfl" target="_blank">
-                    <img src="assets/Ado.jpg" alt="Ado" height="300">
-                </a>
-            </td>
-            <td width="50"></td> <!-- Space between -->
-            <td>
-                <p>My Coding Playlist:</p>
-                <iframe src="https://open.spotify.com/embed/playlist/5QN758Z8pBkVNH97lywXyz?utm_source=generator" 
-                        width="300" height="380" 
-                        title="Hence's Coding Playlist">
-                </iframe>
-            </td>
-        </tr>
-    </table>
-    <br>
-    
-    <p>Favorite Soundtrack: Odo</p>
-    <audio controls>
-        <source src="assets/Odo.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <br><br>
-    
-    <h3>Games</h3>
-    <a href="https://genshin.hoyoverse.com" target="_blank">
-        <img src="assets/genshin.jpg" alt="Genshin Impact" height="200">
-    </a>
-    <a href="https://wutheringwaves.kurogames.com" target="_blank">
-        <img src="assets/wuwa.png" alt="Wuthering Waves" height="200">
-    </a>
-    <a href="https://hsr.hoyoverse.com" target="_blank">
-        <img src="assets/hsr.jpg" alt="Honkai: Star Rail" height="200">
-    </a>
-    <a href="https://www.omori-game.com" target="_blank">
-        <img src="assets/omori.jpg" alt="Omori" height="200">
-    </a>
-    <a href="https://ffvii.square-enix-games.com" target="_blank">
-        <img src="assets/ff7.jpg" alt="Final Fantasy 7" height="200">
-    </a>
-    <br><br>
-    
-    <h3>Anime</h3>
-    <p>I also like Anime</p>
-    <h4>My Top 5 Anime</h4>
-    <ul>
-        <li>Silent Voice</li>
-        <li>Frieren: Beyond Journey's End</li>
-        <li>Attack on Titan</li>
-        <li>Mushoku Tensei</li>
-        <li>Jujutsu Kaisen</li>
-    </ul>
-    
-    </center>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-code"></i> Hey there I'm Hence</h1>
+                <div class="underline"></div>
+                <p class="intro">
+                    I'm an aspiring Software Engineer currently pursuing my Bachelor's degree in 
+                    Computer Science at Batangas State University Alangilan Campus.
+                </p>
+            </div>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-container">
+                <div class="profile-card">
+                    <img src="assets/ProfileGen.jpeg" alt="Hence's Profile Picture" class="profile-img">
+                    <div class="profile-info">
+                        <h3><i class="fas fa-user"></i> About Me</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> balmesgenrique27@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> 09081231414</p>
+                            <p><i class="fas fa-user-circle"></i> <strong>Age & Gender:</strong> 21, Male</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="tech-section">
+            <h2><i class="fas fa-laptop-code"></i> My Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-card">HTML</div>
+                <div class="tech-card">CSS</div>
+                <div class="tech-card">JavaScript</div>
+                <div class="tech-card">Python</div>
+                <div class="tech-card">DSA</div>
+                <div class="tech-card">Java</div>
+                <div class="tech-card">SQL</div>
+                <div class="tech-card">PHP</div>
+                <div class="tech-card">Kotlin</div>
+                <div class="tech-card">Flutter</div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section class="hobbies-section">
+            <h2><i class="fas fa-heart"></i> My Hobbies Gallery</h2>
+            
+            <!-- Music Section -->
+            <div class="music-section">
+                <h3><i class="fas fa-music"></i> Music</h3>
+                <h4><i class="fas fa-star"></i> Favorite Artist: Ado</h4>
+                
+                <div class="music-container">
+                    <div class="artist-card">
+                        <a href="https://open.spotify.com/artist/6mEQK9m2krja6X1cfsAjfl" target="_blank" class="image-link">
+                            <img src="assets/Ado.jpg" alt="Ado" class="artist-img">
+                            <div class="image-overlay">Click to view on Spotify</div>
+                        </a>
+                        <div class="audio-player">
+                            <p><i class="fas fa-play-circle"></i> Favorite Soundtrack: Odo</p>
+                            <audio controls>
+                                <source src="assets/Odo.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                    
+                    <div class="playlist-card">
+                        <h4><i class="fas fa-headphones"></i> My Coding Playlist</h4>
+                        <iframe src="https://open.spotify.com/embed/playlist/5QN758Z8pBkVNH97lywXyz?utm_source=generator" 
+                                width="100%" height="380" 
+                                title="Hence's Coding Playlist"
+                                class="spotify-embed">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Section -->
+            <div class="games-section">
+                <h3><i class="fas fa-gamepad"></i> Games</h3>
+                <div class="games-grid">
+                    <a href="https://genshin.hoyoverse.com" target="_blank" class="game-card">
+                        <img src="assets/genshin.jpg" alt="Genshin Impact">
+                        <div class="game-overlay">Genshin Impact</div>
+                    </a>
+                    <a href="https://wutheringwaves.kurogames.com" target="_blank" class="game-card">
+                        <img src="assets/wuwa.png" alt="Wuthering Waves">
+                        <div class="game-overlay">Wuthering Waves</div>
+                    </a>
+                    <a href="https://hsr.hoyoverse.com" target="_blank" class="game-card">
+                        <img src="assets/hsr.jpg" alt="Honkai: Star Rail">
+                        <div class="game-overlay">Honkai: Star Rail</div>
+                    </a>
+                    <a href="https://www.omori-game.com" target="_blank" class="game-card">
+                        <img src="assets/omori.jpg" alt="Omori">
+                        <div class="game-overlay">Omori</div>
+                    </a>
+                    <a href="https://ffvii.square-enix-games.com" target="_blank" class="game-card">
+                        <img src="assets/ff7.jpg" alt="Final Fantasy 7">
+                        <div class="game-overlay">Final Fantasy 7</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Anime Section -->
+            <div class="anime-section">
+                <h3><i class="fas fa-tv"></i> Anime</h3>
+                <p class="anime-intro">I also like watching Anime in my free time!</p>
+                <h4><i class="fas fa-crown"></i> My Top 5 Anime</h4>
+                <div class="anime-list">
+                    <div class="anime-card">
+                        <span class="anime-rank">1</span>
+                        <span class="anime-title">Silent Voice</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">2</span>
+                        <span class="anime-title">Frieren: Beyond Journey's End</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">3</span>
+                        <span class="anime-title">Attack on Titan</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">4</span>
+                        <span class="anime-title">Mushoku Tensei</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">5</span>
+                        <span class="anime-title">Jujutsu Kaisen</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Hence Balmes. All Rights Reserved.</p>
+                <p>Aspiring Software Engineer | Batangas State University</p>
+                <div class="social-links">
+                    <a href="mailto:balmesgenrique27@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
