@@ -6,6 +6,7 @@
     <title>Hence - Aspiring SWE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -16,7 +17,7 @@
                 <div class="underline"></div>
                 <p class="intro">
                     I'm an aspiring Software Engineer currently pursuing my Bachelor's degree in 
-                    Computer Science at Batangas State University Alangilan Campus.
+                    Computer Science at Batangas State University Alangilan Campus. I like games, anime, and going to the gym.
                 </p>
             </div>
         </header>
@@ -127,6 +128,99 @@
             </div>
         </section>
 
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+            <p class="contact-intro">Want to discuss opportunities or just say hello? Send me a message directly!</p>
+            
+            <div class="contact-container">
+                <!-- Contact Info Card -->
+                <div class="contact-info-card">
+                    <h3><i class="fas fa-info-circle"></i> Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>balmesgenrique27@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>09081231414</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Batangas, Philippines</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Usually within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <p><i class="fas fa-bolt"></i> Prefer direct email? Click the envelope icon below!</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="name" name="name" required 
+                               placeholder="Enter your name"
+                               class="form-input">
+                        <span class="input-focus-line"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="Enter your email"
+                               class="form-input">
+                        <span class="input-focus-line"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                        <input type="text" id="subject" name="subject" required 
+                               placeholder="What's this about?"
+                               class="form-input">
+                        <span class="input-focus-line"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Message</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  placeholder="Your message here..."
+                                  class="form-textarea"></textarea>
+                        <span class="input-focus-line"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                            <span class="btn-shine"></span>
+                        </button>
+                        <button type="reset" class="reset-btn">
+                            <i class="fas fa-redo"></i> Clear Form
+                        </button>
+                    </div>
+
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </section>
+
         <!-- Hobbies Section -->
         <section class="hobbies-section">
             <h2><i class="fas fa-heart"></i> My Hobbies Gallery</h2>
@@ -144,7 +238,7 @@
                         </a>
                         <div class="audio-player">
                             <p><i class="fas fa-play-circle"></i> Favorite Soundtrack: Odo</p>
-                            <audio controls>
+                            <audio controls aria-label="Favorite soundtrack: Odo by Ado">
                                 <source src="assets/Odo.mp3" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
@@ -190,67 +284,58 @@
             </div>
 
             <!-- Anime Section -->
-            <!-- Anime Section -->
-<div class="anime-section">
-    <h3><i class="fas fa-tv"></i> Anime</h3>
-    <p class="anime-intro">I also like watching Anime in my free time!</p>
-    
-    <!-- Anime GIFs Gallery -->
-    <div class="anime-gallery">
-
-        <div class="gif-item">
-            <img src="assets/silentvoice.gif" alt="A Silent Voice" class="anime-gif">
-            <div class="gif-overlay">A Silent Voice</div>
-        </div>
-
-
-        <div class="gif-item">
-            <img src="assets/frieren.gif" alt="Frieren: Beyond Journey's End" class="anime-gif">
-            <div class="gif-overlay">Frieren</div>
-        </div>
-
-        <div class="gif-item">
-            <img src="assets/aot.gif" alt="Attack on Titan" class="anime-gif">
-            <div class="gif-overlay">Attack on Titan</div>
-        </div>
-
-        
-        <div class="gif-item">
-            <img src="assets/mushoku.gif" alt="Mushoku Tensei" class="anime-gif">
-            <div class="gif-overlay">Mushoku Tensei</div>
-        </div>
-
-        <div class="gif-item">
-            <img src="assets/jjk.gif" alt="Jujutsu Kaisen" class="anime-gif">
-            <div class="gif-overlay">Jujutsu Kaisen</div>
-        </div>
-
-    </div>
-    
-    <h4><i class="fas fa-crown"></i> My Top 5 Anime</h4>
-    <div class="anime-list">
-        <div class="anime-card">
-            <span class="anime-rank">1</span>
-            <span class="anime-title">Silent Voice</span>
-        </div>
-        <div class="anime-card">
-            <span class="anime-rank">2</span>
-            <span class="anime-title">Frieren: Beyond Journey's End</span>
-        </div>
-        <div class="anime-card">
-            <span class="anime-rank">3</span>
-            <span class="anime-title">Attack on Titan</span>
-        </div>
-        <div class="anime-card">
-            <span class="anime-rank">4</span>
-            <span class="anime-title">Mushoku Tensei</span>
-        </div>
-        <div class="anime-card">
-            <span class="anime-rank">5</span>
-            <span class="anime-title">Jujutsu Kaisen</span>
-        </div>
-    </div>
-</div>
+            <div class="anime-section">
+                <h3><i class="fas fa-tv"></i> Anime</h3>
+                <p class="anime-intro">I also like watching Anime in my free time!</p>
+                
+                <!-- Anime GIFs Gallery -->
+                <div class="anime-gallery">
+                    <div class="gif-item">
+                        <img src="assets/silentvoice.gif" alt="A Silent Voice" class="anime-gif">
+                        <div class="gif-overlay">A Silent Voice</div>
+                    </div>
+                    <div class="gif-item">
+                        <img src="assets/frieren.gif" alt="Frieren: Beyond Journey's End" class="anime-gif">
+                        <div class="gif-overlay">Frieren</div>
+                    </div>
+                    <div class="gif-item">
+                        <img src="assets/aot.gif" alt="Attack on Titan" class="anime-gif">
+                        <div class="gif-overlay">Attack on Titan</div>
+                    </div>
+                    <div class="gif-item">
+                        <img src="assets/mushoku.gif" alt="Mushoku Tensei" class="anime-gif">
+                        <div class="gif-overlay">Mushoku Tensei</div>
+                    </div>
+                    <div class="gif-item">
+                        <img src="assets/jjk.gif" alt="Jujutsu Kaisen" class="anime-gif">
+                        <div class="gif-overlay">Jujutsu Kaisen</div>
+                    </div>
+                </div>
+                
+                <h4><i class="fas fa-crown"></i> My Top 5 Anime</h4>
+                <div class="anime-list">
+                    <div class="anime-card">
+                        <span class="anime-rank">1</span>
+                        <span class="anime-title">Silent Voice</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">2</span>
+                        <span class="anime-title">Frieren: Beyond Journey's End</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">3</span>
+                        <span class="anime-title">Attack on Titan</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">4</span>
+                        <span class="anime-title">Mushoku Tensei</span>
+                    </div>
+                    <div class="anime-card">
+                        <span class="anime-rank">5</span>
+                        <span class="anime-title">Jujutsu Kaisen</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Footer -->
@@ -259,18 +344,125 @@
                 <p>&copy; 2024 Hence Balmes. All Rights Reserved.</p>
                 <p>Aspiring Software Engineer | Batangas State University</p>
                 <div class="social-links">
-                    <a href="mailto:balmesgenrique27@gmail.com" class="social-link">
+                    <a href="mailto:balmesgenrique27@gmail.com" class="social-link" aria-label="Send email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://linkedin.com" class="social-link" aria-label="LinkedIn profile" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://github.com" class="social-link" aria-label="GitHub profile" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>
         </footer>
     </div>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formStatus = document.getElementById('formStatus');
+            const submitBtn = this.querySelector('.submit-btn');
+            
+            // Show loading state
+            formStatus.textContent = 'Sending message...';
+            formStatus.className = 'form-status sending';
+            submitBtn.disabled = true;
+            
+            // Simulate API call with setTimeout
+            setTimeout(() => {
+                // Success simulation
+                formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                formStatus.className = 'form-status success';
+                
+                // Reset form
+                this.reset();
+                
+                // Re-enable button after a moment
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    // Clear status after 5 seconds
+                    setTimeout(() => {
+                        formStatus.textContent = '';
+                        formStatus.className = 'form-status';
+                    }, 5000);
+                }, 1000);
+                
+            }, 1500);
+        });
+
+        // Input focus animations
+        const inputs = document.querySelectorAll('.form-input, .form-textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Add ripple effect to buttons
+        const buttons = document.querySelectorAll('.submit-btn, .reset-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ripple = document.createElement('span');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation to sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
