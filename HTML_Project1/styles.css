@@ -26,7 +26,7 @@ html {
     scroll-padding-top: 80px;
 }
 
-/* Header Styles */
+/* Header Styles with Profile Image */
 header {
     text-align: center;
     padding: 40px 20px;
@@ -57,18 +57,55 @@ header::before {
     100% { background-position: 200% 0; }
 }
 
-.header-content h1 {
+.header-content {
+    display: flex;
+    justify-content: center;
+}
+
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+}
+
+.header-profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #0000ff;
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.6);
+    transition: all 0.5s ease;
+    animation: profileFloat 4s ease-in-out infinite;
+}
+
+@keyframes profileFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.header-profile-img:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 35px rgba(0, 0, 255, 0.8);
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-text h1 {
     font-size: 2.8rem;
     color: #0000ff;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 15px;
     text-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    text-align: left;
 }
 
-.header-content h1 i {
+.header-text h1 i {
     color: #0000ff;
     animation: pulse 2s infinite;
     text-shadow: 0 0 15px rgba(0, 0, 255, 0.8);
@@ -95,7 +132,7 @@ header::before {
     width: 100px;
     height: 4px;
     background: #0000ff;
-    margin: 0 auto 25px;
+    margin: 0 0 25px 0;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
     position: relative;
@@ -121,11 +158,10 @@ header::before {
 .intro {
     font-size: 1.2rem;
     color: #cccccc;
-    max-width: 800px;
-    margin: 0 auto;
     line-height: 1.8;
     opacity: 0;
     animation: fadeIn 1s ease-out 0.3s forwards;
+    text-align: left;
 }
 
 @keyframes fadeIn {
@@ -154,11 +190,8 @@ header::before {
 .profile-card {
     background: #0a0a0a;
     border-radius: 15px;
-    padding: 30px;
+    padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);
-    display: flex;
-    align-items: center;
-    gap: 30px;
     max-width: 800px;
     width: 100%;
     transition: all 0.3s ease;
@@ -193,43 +226,31 @@ header::before {
     animation-duration: 3s;
 }
 
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #0000ff;
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
-    transition: transform 0.5s ease;
+.profile-info h3 {
+    font-size: 1.8rem;
+    color: #0000ff;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     position: relative;
     z-index: 1;
 }
 
-.profile-card:hover .profile-img {
-    transform: scale(1.05) rotate(5deg);
-}
-
-.profile-info h3 {
-    font-size: 1.8rem;
-    color: #0000ff;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.contact-info {
     position: relative;
     z-index: 1;
 }
 
 .contact-info p {
-    margin: 15px 0;
+    margin: 20px 0;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 10px;
     color: #cccccc;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 8px 0;
 }
 
 .contact-info p:hover {
@@ -239,6 +260,7 @@ header::before {
 .contact-info i {
     color: #0000ff;
     width: 20px;
+    font-size: 1.2rem;
     transition: transform 0.3s ease;
 }
 
@@ -248,6 +270,31 @@ header::before {
 
 .contact-info strong {
     color: #ffffff;
+    min-width: 120px;
+}
+
+.github-link {
+    color: #0000ff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.github-link:hover {
+    color: #ffffff;
+    background: #0000ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
+}
+
+.github-link .fa-external-link-alt {
+    font-size: 0.8rem;
 }
 
 /* Tech Stack Section */
@@ -1333,7 +1380,7 @@ footer.animate-in {
 }
 
 /* Loading optimization */
-.profile-img,
+.header-profile-img,
 .artist-img,
 .game-card img,
 .anime-gif {
@@ -1347,8 +1394,22 @@ footer.animate-in {
         gap: 30px;
     }
     
-    .profile-card {
+    .header-profile {
         flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .header-text h1 {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .underline {
+        margin: 0 auto 25px;
+    }
+    
+    .intro {
         text-align: center;
     }
     
@@ -1367,6 +1428,11 @@ footer.animate-in {
         font-size: 2.2rem;
         flex-direction: column;
         gap: 10px;
+    }
+    
+    .header-profile-img {
+        width: 200px;
+        height: 200px;
     }
     
     .tech-grid {
@@ -1416,7 +1482,7 @@ footer.animate-in {
         font-size: 1.8rem;
     }
     
-    .profile-img {
+    .header-profile-img {
         width: 150px;
         height: 150px;
     }
@@ -1430,6 +1496,16 @@ footer.animate-in {
         padding: 20px;
     }
     
+    .contact-info p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .contact-info strong {
+        min-width: auto;
+    }
+    
     .anime-gallery {
         gap: 10px;
     }
@@ -1437,5 +1513,9 @@ footer.animate-in {
     .gif-item {
         width: 100px;
         height: 100px;
+    }
+    
+    .profile-card {
+        padding: 25px;
     }
 }
