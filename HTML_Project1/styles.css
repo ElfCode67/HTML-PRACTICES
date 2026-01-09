@@ -172,14 +172,6 @@ header::before {
 /* Profile Section */
 .profile-section {
     margin: 40px 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.profile-section.animate-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .profile-container {
@@ -305,14 +297,6 @@ header::before {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);
     border: 1px solid #0000ff;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out 0.2s;
-}
-
-.tech-section.animate-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .tech-section h2 {
@@ -376,14 +360,6 @@ header::before {
 /* Hobbies Section */
 .hobbies-section {
     margin: 60px 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out 0.4s;
-}
-
-.hobbies-section.animate-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .hobbies-section > h2 {
@@ -625,8 +601,6 @@ audio:hover {
     font-size: 1.2rem;
     color: #cccccc;
     margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
 .anime-section h4 {
@@ -725,14 +699,6 @@ audio:hover {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);
     border: 1px solid #0000ff;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out 0.6s;
-}
-
-.contact-section.animate-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .contact-section h2 {
@@ -1028,14 +994,6 @@ footer {
     text-align: center;
     border: 1px solid #0000ff;
     box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out 0.8s;
-}
-
-footer.animate-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .footer-content p {
@@ -1141,18 +1099,6 @@ footer.animate-in {
     border: 2px solid #0000ff;
     box-shadow: 0 0 15px rgba(0, 0, 255, 0.3);
     transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.tech-category:nth-child(1) { transition-delay: 0.1s; }
-.tech-category:nth-child(2) { transition-delay: 0.2s; }
-.tech-category:nth-child(3) { transition-delay: 0.3s; }
-.tech-category:nth-child(4) { transition-delay: 0.4s; }
-
-.tech-section.animate-in .tech-category {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .tech-category:hover {
@@ -1217,14 +1163,6 @@ footer.animate-in {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);
     border: 1px solid #0000ff;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out 0.4s;
-}
-
-.skills-section.animate-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .skills-section h2 {
@@ -1364,19 +1302,57 @@ footer.animate-in {
     transform: translateY(0);
 }
 
-/* Focus styles for accessibility */
-:focus {
-    outline: 2px solid #3333ff;
-    outline-offset: 2px;
+/* Scroll to Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #0000ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+    transition: all 0.3s ease;
 }
 
-:focus:not(:focus-visible) {
-    outline: none;
+.scroll-top-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
 }
 
-:focus-visible {
-    outline: 2px solid #3333ff;
-    outline-offset: 2px;
+/* Animation Classes */
+section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Light theme classes */
+.light-theme {
+    background: #f5f5f5 !important;
+    color: #333 !important;
+}
+
+.light-theme .tech-card,
+.light-theme .skill-card,
+.light-theme section {
+    background: white !important;
+    color: #333 !important;
+}
+
+.anime-card.active {
+    background: rgba(0, 0, 255, 0.2) !important;
+    transform: translateX(20px) !important;
 }
 
 /* Loading optimization */
